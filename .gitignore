@@ -1,8 +1,26 @@
 .Rproj.user
+.Rproj.user/
 .Rhistory
-.RData
+.Rdata
+.RDataTmp*
 .httr-oauth
 .DS_Store
 .quarto
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+Thumbs.db
+
+_freeze/
+_cache/
+*.knit.md
+*.utf8.md
+tmp/
+temp/
 
 /.quarto/
+
+data/
+.RData
