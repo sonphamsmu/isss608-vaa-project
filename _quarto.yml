@@ -2,12 +2,24 @@ project:
   type: website
 
 website:
-  title: "isss608-vaa-project"
+  title: "VA Project - Group 4"
   navbar:
-    left:
+    right: 
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: The Team
+    left:
+      - text: Overview
+        menu: 
+          - href: overview/proposal/proposal.html
+            text: Project Proposal  
+      - text: Shiny App
+        menu: 
+          - text: Shiny App (ongoing)
+      - text: Modules
+        menu: 
+          - text: EDA
 
 format:
   html:

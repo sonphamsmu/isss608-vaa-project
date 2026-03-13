@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Meet the Team!"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+Ongoing
