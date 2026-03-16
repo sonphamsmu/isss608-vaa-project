@@ -36,7 +36,7 @@ Understanding customer financial behavior is critical for fintech platforms aimi
 This section highlights the potential challenges that the team might face. It also outlines the mitigation plans that will be implemented to reduce the risks associated with the current Shiny app project. 
 
 |  |  |  |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Potential Challenges**  | **Details**  | **Mitigation Plan**  |
 | **Inconsistent data preparation**  | Different ways of data cleaning.  | To identify critical data preparation steps that require strict standardization.  |
 | **Data size**  | The total file size amounts to \~130MB and the app might be computationally heavy to run.  | Precomputation of summaries to reduce on the need for backend calculation.  |
@@ -55,8 +55,34 @@ This section highlights the potential challenges that the team might face. It al
 
 ## 6. Scope of Work
 
-The following table details the scope of work and responsibilities assigned to the respective members of the Team. The Team has also included a timeline to aid the Project’s internal progress monitoring. 
+The following table details the scope of work and responsibilities assigned to the respective members of the Team. The Team has also included a timeline to aid the Project’s internal progress monitoring.
 
-## 7. Expected Outcomes
+![](images/clipboard-3315452014.png){width="718"}
 
-The expected outcome of the project is a functional and interactive R Shiny dashboard that enables users to explore customer data, identify meaningful customer segments, and assess churn related risk in an accessible format. The final application is expected to support analytical storytelling and practical decision making by combining descriptive, unsupervised, and supervised analytics in one platform. 
+![](images/clipboard-3070027633.png)
+
+## 7. Prototype Ideation
+
+Our prototype ideation started with low-fidelity sketches to outline the layout, navigation, and key functionalities of the Shiny application. The sketches were then refined into a higher-fidelity prototype that improves visual structure and usability.
+
+**Ideation Sketches**
+
+![](images/clipboard-1126463645.png)
+
+![](images/clipboard-872832007.png)
+
+**High-fidelity Prototype**
+
+![](images/clipboard-171779855.png)
+
+**Key Features**
+
+-   Side navigation tabs: allow user to select and move around the major modules of our app
+
+-   Parameters selection: consist of variables lists or sliders to let user customize the parameters for plotting
+
+-   Plotting area: show the plots and other components such as statistic metrics tab
+
+## 8. Expected Outcomes
+
+The expected outcome of the project is a functional and interactive R Shiny dashboard that enables users to configure models, run analyses, and interpret results within a single visual analytics environment. The final application is expected to support analytical storytelling and practical decision making by combining descriptive, unsupervised, and supervised analytics in one platform.
