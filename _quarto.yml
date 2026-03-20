@@ -20,6 +20,12 @@ website:
       - text: Modules
         menu: 
           - text: EDA
+            href: "https://sonpham-isss608-vaa-jan2526.netlify.app/takehome_ex/takehome2/takehome_ex2"
+          - text: Clustering
+            href: "https://edwardbyl.netlify.app/take-home_ex/take-home_ex02/take-home_ex02"
+          - text: Prediction
+            href: "https://isss608-visual.netlify.app/take-home_ex/take-home_ex2/take-home_ex2"
+        
 
 format:
   html:
