@@ -24,3 +24,5 @@ temp/
 
 data/
 .RData
+
+**/*.quarto_ipynb

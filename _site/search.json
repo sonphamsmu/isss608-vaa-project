@@ -63,6 +63,7 @@
     "text": "The expected outcome of the project is a functional and interactive R Shiny dashboard that enables users to configure models, run analyses, and interpret results within a single visual analytics environment. The final application is expected to support analytical storytelling and practical decision making by combining descriptive, unsupervised, and supervised analytics in one platform."
   },
   {
+<<<<<<< HEAD
     "objectID": "index.html",
     "href": "index.html",
     "title": "VA Project - Group 4",
@@ -70,10 +71,13 @@
     "text": "Back to top"
   },
   {
+=======
+>>>>>>> f01f975631553485605edca3a3392df6c193a52c
     "objectID": "about.html",
     "href": "about.html",
     "title": "Meet the Team!",
     "section": "",
+<<<<<<< HEAD
     "text": "Ongoing\n\n\n\n Back to top"
   },
   {
@@ -82,5 +86,8 @@
     "title": "Group 4 Project Meeting Records",
     "section": "",
     "text": "Back to top"
+=======
+    "text": "Ongoing"
+>>>>>>> f01f975631553485605edca3a3392df6c193a52c
   }
 ]
