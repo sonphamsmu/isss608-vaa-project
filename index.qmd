@@ -3,5 +3,6 @@ format: html
 page-layout: full
 ---
 
-::: full-hero
+::: hero-banner
+![](images/banner.jpg){.hero-banner-img}
 :::

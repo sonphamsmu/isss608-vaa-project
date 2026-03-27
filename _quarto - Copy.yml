@@ -9,8 +9,6 @@ website:
         text: Home
       - href: about.qmd
         text: The Team
-      - icon: github
-        href: https://github.com/sonphamsmu/isss608-vaa-project
     left:
       - text: Overview
         menu: 
@@ -22,14 +20,11 @@ website:
       - text: Modules
         menu: 
           - text: EDA
-  
-  page-navigation: true
-  back-to-top-navigation: true
 
 format:
   html:
     theme:
-      - zephyr
+      - cosmo
       - brand
     css: styles.css
     toc: true
