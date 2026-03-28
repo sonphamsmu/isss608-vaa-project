@@ -18,7 +18,9 @@ website:
             text: Project Proposal  
       - text: Shiny App
         menu: 
-          - text: Shiny App (ongoing)
+          - text: Shiny App
+            href: "https://edwardbyl.shinyapps.io/AChickenRiceStory/"
+          - text: User Guide
       - text: Modules
         menu: 
           - text: EDA
