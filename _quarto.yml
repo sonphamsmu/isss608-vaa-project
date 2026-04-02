@@ -4,23 +4,31 @@ project:
 website:
   title: "VA Project - Group 4"
   navbar:
-    right: 
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: The Team
+    right:
+      - text: The Team
+        href: about.qmd
       - icon: github
-        href: https://github.com/sonphamsmu/isss608-vaa-project
+        text: Github
+        menu: 
+          - href: https://github.com/sonphamsmu/isss608-vaa-project
+            text: Project Site
+          - href: https://github.com/edwardbyl00/AChickenRiceStory
+            text: Shiny App
     left:
       - text: Overview
         menu: 
-          - href: overview/proposal/proposal.html
-            text: Project Proposal  
+          - href: modules/proposal/proposal.html
+            text: Project Proposal
+          - href: modules/poster/poster.html
+            text: Project Poster
+          - href: modules/meetings/meetings.html
+            text: Meeting Minutes
       - text: Shiny App
         menu: 
           - text: Shiny App
             href: "https://edwardbyl.shinyapps.io/AChickenRiceStory/"
           - text: User Guide
+            href: modules/userguide/userguide.html
       - text: Modules
         menu: 
           - text: EDA

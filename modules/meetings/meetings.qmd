@@ -1,5 +1,8 @@
 ---
-title: "Group 4 Project Meeting Records"
+title: "ISSS608 Group 4 Project Meeting Minutes"
+author: "Edward Lim Boon Yan, Chen Ho Tung, Pham Hung Son"
+date: "Mar 15, 2026"
+date-modified: "last-modified"
 execute: 
   eval: true
   echo: true
@@ -8,4 +11,212 @@ execute:
 format: html
 ---
 
-# 
+## Project Meeting 1
+
+**Date:** 14/03/2026
+
+**Location:** SMU Campus
+
+**Attendees:** Son, Edward, Ho
+
+### 1. Data preparation standardisation
+
+-   The team discussed on the need to standardize base data
+
+-   Ho shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.
+
+### 2. Quarto website set up
+
+-   Son shared on the initial set up of website using Quarto and load in the proposal as a draft
+
+### 3. Proposal Scope of work & distribution of workload
+
+-   The team further aligned on the job scope after meeting with Prof Kam
+
+-   Edward suggested to stick with separating to task by modules:
+
+    -   **Son** will focus on the *Exploratory Data Analysis (EDA)* module.
+
+    <!-- -->
+
+    -   **Edward** will handle the *Clustering* module.
+
+    <!-- -->
+
+    -   **Ho** will be responsible for the *Predictive Modelling* module.
+
+## Project Meeting 2
+
+**Date:** 15/03/2026
+
+**Location:** Microsoft Teams Online Call
+
+**Attendees:** Son, Edward, Ho
+
+### 1. Project Coordination and Planning
+
+-   The team discussed arranging a face-to-face meetup session – planned to last approximately four hours. This session aims to facilitate deeper collaboration and alignment across all project components.
+
+-   Additionally, the team shared and reviewed the project storyboard to ensure consistency in design and direction before further development.
+
+### 2. Development Workflow and Deployment Strategy
+
+-   Ho & Ed raised concerns regarding Netlify limitations, particularly on excessive republishing.
+
+-   The team agreed to focus on developing modules locally and minimise unnecessary redeployments.
+
+### 3. Storyboard and Proposal Updates
+
+-   Son was assigned to clean up the storyboard and update the project proposal accordingly, scheduled to be completed by **18 March 2026** to ensure alignment with project requirements.
+
+### 4. Modules Development
+
+The team outlined several key features to be implemented in the EDA module:
+
+-   Visualisation of data distributions
+
+-   Toggle functionality for different data types (bivariate and multivariate analysis)
+
+-   User selection of dependent and output variables
+
+-   Smart EDA functionalities to enhance automated insights
+
+For the Clustering & Prediction modules:
+
+-   Interactive correlation matrix with user input controls
+
+-   Analysis of customer lifetime value (CLV) as the target variable, including chart setup
+
+-   User-controlled toggles for outlier removal
+
+-   Integration of data transformation steps with visual feedback
+
+These tasks are collaboratively assigned among Son, Ho, and Edward.
+
+## Project Meeting 3
+
+**Date:** 20/03/2026
+
+**Location:** SMU Campus
+
+**Attendees:** Son, Edward, Ho
+
+The team focused on the foundational setup of the Shiny application, specifically addressing the UI framework and data clustering logic.
+
+### 1. Application Logic & Clustering
+
+-   **User Flow:** The app will allow users to select specific features/variables to perform clustering.
+
+<!-- -->
+
+-   **Forecasting:** Once clusters are generated, the app will map these results and perform a group_by function to provide aggregate forecasting for each individual cluster.
+
+-   **Simplification:** The team agreed to avoid "over-complicating" the prototype. The initial focus will be on basic data understanding before adding advanced features like export functions.
+
+### 2. UI/UX Design 
+
+-   **Framework:** Use of `bs4dash` was confirmed as it is more user-friendly and requires less manual configuration than the "basic" page layout.
+
+-   **Layout:** The interface will feature a **sidebar navigation tab**, **side panel** for user inputs (dropdowns, sliders, file uploads) and a **main panel** for visual outputs (histograms/charts).
+
+-   **Fidelity:** The team discussed using "low-fidelity" wireframes from previous phase to move toward "high-fidelity" design.
+
+### 3. Deployment & Version Control
+
+-   **Repository Strategy:** to avoid rendering errors, the team decided to use two separate GitHub repositories: one for the main website and one for the Shiny app.
+
+-   **Integration:** The main website will include a redirect link pointing directly to the hosted Shiny application.
+
+-   **Access:** Son added Ho and Ed as collaborators on the new repositories.
+
+### 4. Action Items after Meetup
+
+-   **Edward** to finalize the GitHub pull/push connection and verify the redirect link on the main website.
+
+-   **Ho** to begin building the app's basic bs4dash framework.
+
+-   Son begin to draft the "User Guide".
+
+-   Each members to continue the development of their respective modules.
+
+-   The team agreed to meet in person again on **Saturday 28 March** to review and finalize the prototype & modules.
+
+## Project Meeting 4
+
+**Date:** 28/03/2026
+
+**Location:** SMU Campus
+
+**Attendees:** Son, Edward, Ho
+
+**Theme:** Fine-tuning EDA, Clustering Logic, and Poster Logistics
+
+### 1. App Performance & Data Handling
+
+The team discussed optimizing the user experience by limiting data overhead and improving initial data inspection.
+
+-   **Upload Limits:** Ho proposed limiting users to a maximum of **three version uploads** to prevent hitting system limits.
+
+-   **Data Glimpse:** to speed up the process, the team agreed on using a **sampling approach**. Instead of loading the full dataset for every check, the app will show a "glimpse" or a small portion to ensure the model fits before full execution.
+
+-   **Data Cleaning:** The **"Active Data"** framework was confirmed. All modules must refer to the **active data** object to maintain consistency across cleaning, EDA, and modeling.
+
+### 2. EDA Customization
+
+The team debated on how to make the EDA more interactive and meaningful for end-users.
+
+-   **Variable Handling:** Son suggested removing non-analytical fields like `CustomerID` from univariate plots, but Ed proposed keeping them as "unit counts" (using distinct_count) to track unique customers across categories like Gender or Occupation.
+
+-   **The "French Fry" Histogram:** A key discussion point was allowing users to **toggle bin sizes**.
+
+    -   Small bins = "French Fries" (High detail/narrow distribution).
+
+    -   Large bins = "Hash Browns" (Collapsed/generalized distribution).
+
+-   **Log Scaling:** For transaction values that are highly skewed, Ho and Ed agreed to implement **Log Transformation** options to compress the scale and get better visualizations.
+
+### 3. Clustering Logic & Optimal 'K'
+
+Edward walked the team through the clustering module, emphasizing the need for both automated and subjective analysis.
+
+-   **Feature Selection:** The app will allow users to select features and check for **multicollinearity** (using methodologies taught by Prof Kam) before running the simulation.
+
+-   **Determining Clusters:** The team will use two primary metrics:
+
+    1.  **Elbow Plot:** To see where the "cost" of adding another cluster drops off.
+
+    2.  **Silhouette Score** (referred to as **"Silvia Score"**): Where the higher the score, the better the cluster separation.
+
+-   **Note on Subjectivity:** Ed noted that the Elbow plot is subjective. While an algorithm can suggest a path, the user should be allowed to choose the cluster count that makes the most sense for their business logic.
+
+### 4. GitHub Hygiene & Publishing
+
+The team shared some "lessons learned" to prevent project crashes.
+
+-   **Commit First:** Ed & Son reminded everyone: **Always commit your changes before pulling.**
+
+-   **Publishing Protocol:** Do not close the RStudio terminal prematurely while the app is "Republishing." Closing it halfway leads to a 30-minute troubleshooting session (or requires diving into Git Bash).
+
+### 5. Poster & Deadline
+
+Son will lead the design of the A1-sized poster on Figma.
+
+-   **Requirement:** Every team member needs to provide:
+
+    -   A screenshot of their respective module.
+
+    -   A brief summary/description of what the module does.
+
+-   **The "A Chicken Rice Story" Name:** Son expressed doubt about the project name, but the team decided to stick with it – joking that the ultimate goal of working/studying is "to eat chicken rice every day."
+
+-   Later the team agreed with the new project name "ChickInsights" - a combination of "Chicken Thigh" and "Insights"
+
+### 6. Next Action Items after Meeting
+
+-   Son to complete Univariate/Bivariate customization.
+
+-   Edward to finalize Clustering Module & Export function.
+
+-   Ho to finalize Predictive Model Comparison charts.
+
+-   The team agreed to arrange the last Teams Online Call on **Tuesday 31 March** for Poster Review and Finalization of Shiny App.

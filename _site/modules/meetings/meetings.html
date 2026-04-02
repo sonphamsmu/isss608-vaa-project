@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Edward Lim Boon Yan, Chen Ho Tung, Pham Hung Son">
+<meta name="dcterms.date" content="2026-03-15">
 
-<title>Group 4 Project Meeting Records – VA Project - Group 4</title>
+<title>ISSS608 Group 4 Project Meeting Minutes – VA Project - Group 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,8 +97,16 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-overview">    
         <li>
-    <a class="dropdown-item" href="../../overview/proposal/proposal.html">
+    <a class="dropdown-item" href="../../modules/proposal/proposal.html">
  <span class="dropdown-text">Project Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/poster/poster.html">
+ <span class="dropdown-text">Project Poster</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/meetings/meetings.html">
+ <span class="dropdown-text">Meeting Minutes</span></a>
   </li>  
     </ul>
   </li>
@@ -109,7 +119,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="https://edwardbyl.shinyapps.io/AChickenRiceStory/">
  <span class="dropdown-text">Shiny App</span></a>
   </li>  
-        <li class="dropdown-header">User Guide</li>
+        <li>
+    <a class="dropdown-item" href="../../modules/userguide/userguide.html">
+ <span class="dropdown-text">User Guide</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -134,18 +147,26 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">The Team</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/sonphamsmu/isss608-vaa-project"> <i class="bi bi-github" role="img">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text">Github</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/sonphamsmu/isss608-vaa-project">
+ <span class="dropdown-text">Project Site</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/edwardbyl00/AChickenRiceStory">
+ <span class="dropdown-text">Shiny App</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -162,7 +183,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#project-meeting-1" id="toc-project-meeting-1" class="nav-link active" data-scroll-target="#project-meeting-1">Project Meeting 1</a>
+  <ul class="collapse">
+  <li><a href="#data-preparation-standardisation" id="toc-data-preparation-standardisation" class="nav-link" data-scroll-target="#data-preparation-standardisation">1. Data preparation standardisation</a></li>
+  <li><a href="#quarto-website-set-up" id="toc-quarto-website-set-up" class="nav-link" data-scroll-target="#quarto-website-set-up">2. Quarto website set up</a></li>
+  <li><a href="#proposal-scope-of-work-distribution-of-workload" id="toc-proposal-scope-of-work-distribution-of-workload" class="nav-link" data-scroll-target="#proposal-scope-of-work-distribution-of-workload">3. Proposal Scope of work &amp; distribution of workload</a></li>
+  </ul></li>
+  <li><a href="#project-meeting-2" id="toc-project-meeting-2" class="nav-link" data-scroll-target="#project-meeting-2">Project Meeting 2</a>
+  <ul class="collapse">
+  <li><a href="#project-coordination-and-planning" id="toc-project-coordination-and-planning" class="nav-link" data-scroll-target="#project-coordination-and-planning">1. Project Coordination and Planning</a></li>
+  <li><a href="#development-workflow-and-deployment-strategy" id="toc-development-workflow-and-deployment-strategy" class="nav-link" data-scroll-target="#development-workflow-and-deployment-strategy">2. Development Workflow and Deployment Strategy</a></li>
+  <li><a href="#storyboard-and-proposal-updates" id="toc-storyboard-and-proposal-updates" class="nav-link" data-scroll-target="#storyboard-and-proposal-updates">3. Storyboard and Proposal Updates</a></li>
+  <li><a href="#modules-development" id="toc-modules-development" class="nav-link" data-scroll-target="#modules-development">4. Modules Development</a></li>
+  </ul></li>
+  <li><a href="#project-meeting-3" id="toc-project-meeting-3" class="nav-link" data-scroll-target="#project-meeting-3">Project Meeting 3</a>
+  <ul class="collapse">
+  <li><a href="#application-logic-clustering" id="toc-application-logic-clustering" class="nav-link" data-scroll-target="#application-logic-clustering">1. Application Logic &amp; Clustering</a></li>
+  <li><a href="#uiux-design" id="toc-uiux-design" class="nav-link" data-scroll-target="#uiux-design">2. UI/UX Design</a></li>
+  <li><a href="#deployment-version-control" id="toc-deployment-version-control" class="nav-link" data-scroll-target="#deployment-version-control">3. Deployment &amp; Version Control</a></li>
+  <li><a href="#action-items-after-meetup" id="toc-action-items-after-meetup" class="nav-link" data-scroll-target="#action-items-after-meetup">4. Action Items after Meetup</a></li>
+  </ul></li>
+  <li><a href="#project-meeting-4" id="toc-project-meeting-4" class="nav-link" data-scroll-target="#project-meeting-4">Project Meeting 4</a>
+  <ul class="collapse">
+  <li><a href="#app-performance-data-handling" id="toc-app-performance-data-handling" class="nav-link" data-scroll-target="#app-performance-data-handling">1. App Performance &amp; Data Handling</a></li>
+  <li><a href="#eda-customization" id="toc-eda-customization" class="nav-link" data-scroll-target="#eda-customization">2. EDA Customization</a></li>
+  <li><a href="#clustering-logic-optimal-k" id="toc-clustering-logic-optimal-k" class="nav-link" data-scroll-target="#clustering-logic-optimal-k">3. Clustering Logic &amp; Optimal ‘K’</a></li>
+  <li><a href="#github-hygiene-publishing" id="toc-github-hygiene-publishing" class="nav-link" data-scroll-target="#github-hygiene-publishing">4. GitHub Hygiene &amp; Publishing</a></li>
+  <li><a href="#poster-deadline" id="toc-poster-deadline" class="nav-link" data-scroll-target="#poster-deadline">5. Poster &amp; Deadline</a></li>
+  <li><a href="#next-action-items-after-meeting" id="toc-next-action-items-after-meeting" class="nav-link" data-scroll-target="#next-action-items-after-meeting">6. Next Action Items after Meeting</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -171,15 +220,33 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Group 4 Project Meeting Records</h1>
+<h1 class="title">ISSS608 Group 4 Project Meeting Minutes</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Edward Lim Boon Yan, Chen Ho Tung, Pham Hung Son </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 15, 2026</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 2, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -188,10 +255,204 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level1">
-<h1></h1>
+<section id="project-meeting-1" class="level2">
+<h2 class="anchored" data-anchor-id="project-meeting-1">Project Meeting 1</h2>
+<p><strong>Date:</strong> 14/03/2026</p>
+<p><strong>Location:</strong> SMU Campus</p>
+<p><strong>Attendees:</strong> Son, Edward, Ho</p>
+<section id="data-preparation-standardisation" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation-standardisation">1. Data preparation standardisation</h3>
+<ul>
+<li><p>The team discussed on the need to standardize base data</p></li>
+<li><p>Ho shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.</p></li>
+</ul>
+</section>
+<section id="quarto-website-set-up" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-website-set-up">2. Quarto website set up</h3>
+<ul>
+<li>Son shared on the initial set up of website using Quarto and load in the proposal as a draft</li>
+</ul>
+</section>
+<section id="proposal-scope-of-work-distribution-of-workload" class="level3">
+<h3 class="anchored" data-anchor-id="proposal-scope-of-work-distribution-of-workload">3. Proposal Scope of work &amp; distribution of workload</h3>
+<ul>
+<li><p>The team further aligned on the job scope after meeting with Prof Kam</p></li>
+<li><p>Edward suggested to stick with separating to task by modules:</p>
+<ul>
+<li><strong>Son</strong> will focus on the <em>Exploratory Data Analysis (EDA)</em> module.</li>
+</ul>
+<!-- -->
+<ul>
+<li><strong>Edward</strong> will handle the <em>Clustering</em> module.</li>
+</ul>
+<!-- -->
+<ul>
+<li><strong>Ho</strong> will be responsible for the <em>Predictive Modelling</em> module.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="project-meeting-2" class="level2">
+<h2 class="anchored" data-anchor-id="project-meeting-2">Project Meeting 2</h2>
+<p><strong>Date:</strong> 15/03/2026</p>
+<p><strong>Location:</strong> Microsoft Teams Online Call</p>
+<p><strong>Attendees:</strong> Son, Edward, Ho</p>
+<section id="project-coordination-and-planning" class="level3">
+<h3 class="anchored" data-anchor-id="project-coordination-and-planning">1. Project Coordination and Planning</h3>
+<ul>
+<li><p>The team discussed arranging a face-to-face meetup session – planned to last approximately four hours. This session aims to facilitate deeper collaboration and alignment across all project components.</p></li>
+<li><p>Additionally, the team shared and reviewed the project storyboard to ensure consistency in design and direction before further development.</p></li>
+</ul>
+</section>
+<section id="development-workflow-and-deployment-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="development-workflow-and-deployment-strategy">2. Development Workflow and Deployment Strategy</h3>
+<ul>
+<li><p>Ho &amp; Ed raised concerns regarding Netlify limitations, particularly on excessive republishing.</p></li>
+<li><p>The team agreed to focus on developing modules locally and minimise unnecessary redeployments.</p></li>
+</ul>
+</section>
+<section id="storyboard-and-proposal-updates" class="level3">
+<h3 class="anchored" data-anchor-id="storyboard-and-proposal-updates">3. Storyboard and Proposal Updates</h3>
+<ul>
+<li>Son was assigned to clean up the storyboard and update the project proposal accordingly, scheduled to be completed by <strong>18 March 2026</strong> to ensure alignment with project requirements.</li>
+</ul>
+</section>
+<section id="modules-development" class="level3">
+<h3 class="anchored" data-anchor-id="modules-development">4. Modules Development</h3>
+<p>The team outlined several key features to be implemented in the EDA module:</p>
+<ul>
+<li><p>Visualisation of data distributions</p></li>
+<li><p>Toggle functionality for different data types (bivariate and multivariate analysis)</p></li>
+<li><p>User selection of dependent and output variables</p></li>
+<li><p>Smart EDA functionalities to enhance automated insights</p></li>
+</ul>
+<p>For the Clustering &amp; Prediction modules:</p>
+<ul>
+<li><p>Interactive correlation matrix with user input controls</p></li>
+<li><p>Analysis of customer lifetime value (CLV) as the target variable, including chart setup</p></li>
+<li><p>User-controlled toggles for outlier removal</p></li>
+<li><p>Integration of data transformation steps with visual feedback</p></li>
+</ul>
+<p>These tasks are collaboratively assigned among Son, Ho, and Edward.</p>
+</section>
+</section>
+<section id="project-meeting-3" class="level2">
+<h2 class="anchored" data-anchor-id="project-meeting-3">Project Meeting 3</h2>
+<p><strong>Date:</strong> 20/03/2026</p>
+<p><strong>Location:</strong> SMU Campus</p>
+<p><strong>Attendees:</strong> Son, Edward, Ho</p>
+<p>The team focused on the foundational setup of the Shiny application, specifically addressing the UI framework and data clustering logic.</p>
+<section id="application-logic-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="application-logic-clustering">1. Application Logic &amp; Clustering</h3>
+<ul>
+<li><strong>User Flow:</strong> The app will allow users to select specific features/variables to perform clustering.</li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Forecasting:</strong> Once clusters are generated, the app will map these results and perform a group_by function to provide aggregate forecasting for each individual cluster.</p></li>
+<li><p><strong>Simplification:</strong> The team agreed to avoid “over-complicating” the prototype. The initial focus will be on basic data understanding before adding advanced features like export functions.</p></li>
+</ul>
+</section>
+<section id="uiux-design" class="level3">
+<h3 class="anchored" data-anchor-id="uiux-design">2. UI/UX Design</h3>
+<ul>
+<li><p><strong>Framework:</strong> Use of <code>bs4dash</code> was confirmed as it is more user-friendly and requires less manual configuration than the “basic” page layout.</p></li>
+<li><p><strong>Layout:</strong> The interface will feature a <strong>sidebar navigation tab</strong>, <strong>side panel</strong> for user inputs (dropdowns, sliders, file uploads) and a <strong>main panel</strong> for visual outputs (histograms/charts).</p></li>
+<li><p><strong>Fidelity:</strong> The team discussed using “low-fidelity” wireframes from previous phase to move toward “high-fidelity” design.</p></li>
+</ul>
+</section>
+<section id="deployment-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="deployment-version-control">3. Deployment &amp; Version Control</h3>
+<ul>
+<li><p><strong>Repository Strategy:</strong> to avoid rendering errors, the team decided to use two separate GitHub repositories: one for the main website and one for the Shiny app.</p></li>
+<li><p><strong>Integration:</strong> The main website will include a redirect link pointing directly to the hosted Shiny application.</p></li>
+<li><p><strong>Access:</strong> Son added Ho and Ed as collaborators on the new repositories.</p></li>
+</ul>
+</section>
+<section id="action-items-after-meetup" class="level3">
+<h3 class="anchored" data-anchor-id="action-items-after-meetup">4. Action Items after Meetup</h3>
+<ul>
+<li><p><strong>Edward</strong> to finalize the GitHub pull/push connection and verify the redirect link on the main website.</p></li>
+<li><p><strong>Ho</strong> to begin building the app’s basic bs4dash framework.</p></li>
+<li><p>Son begin to draft the “User Guide”.</p></li>
+<li><p>Each members to continue the development of their respective modules.</p></li>
+<li><p>The team agreed to meet in person again on <strong>Saturday 28 March</strong> to review and finalize the prototype &amp; modules.</p></li>
+</ul>
+</section>
+</section>
+<section id="project-meeting-4" class="level2">
+<h2 class="anchored" data-anchor-id="project-meeting-4">Project Meeting 4</h2>
+<p><strong>Date:</strong> 28/03/2026</p>
+<p><strong>Location:</strong> SMU Campus</p>
+<p><strong>Attendees:</strong> Son, Edward, Ho</p>
+<p><strong>Theme:</strong> Fine-tuning EDA, Clustering Logic, and Poster Logistics</p>
+<section id="app-performance-data-handling" class="level3">
+<h3 class="anchored" data-anchor-id="app-performance-data-handling">1. App Performance &amp; Data Handling</h3>
+<p>The team discussed optimizing the user experience by limiting data overhead and improving initial data inspection.</p>
+<ul>
+<li><p><strong>Upload Limits:</strong> Ho proposed limiting users to a maximum of <strong>three version uploads</strong> to prevent hitting system limits.</p></li>
+<li><p><strong>Data Glimpse:</strong> to speed up the process, the team agreed on using a <strong>sampling approach</strong>. Instead of loading the full dataset for every check, the app will show a “glimpse” or a small portion to ensure the model fits before full execution.</p></li>
+<li><p><strong>Data Cleaning:</strong> The <strong>“Active Data”</strong> framework was confirmed. All modules must refer to the <strong>active data</strong> object to maintain consistency across cleaning, EDA, and modeling.</p></li>
+</ul>
+</section>
+<section id="eda-customization" class="level3">
+<h3 class="anchored" data-anchor-id="eda-customization">2. EDA Customization</h3>
+<p>The team debated on how to make the EDA more interactive and meaningful for end-users.</p>
+<ul>
+<li><p><strong>Variable Handling:</strong> Son suggested removing non-analytical fields like <code>CustomerID</code> from univariate plots, but Ed proposed keeping them as “unit counts” (using distinct_count) to track unique customers across categories like Gender or Occupation.</p></li>
+<li><p><strong>The “French Fry” Histogram:</strong> A key discussion point was allowing users to <strong>toggle bin sizes</strong>.</p>
+<ul>
+<li><p>Small bins = “French Fries” (High detail/narrow distribution).</p></li>
+<li><p>Large bins = “Hash Browns” (Collapsed/generalized distribution).</p></li>
+</ul></li>
+<li><p><strong>Log Scaling:</strong> For transaction values that are highly skewed, Ho and Ed agreed to implement <strong>Log Transformation</strong> options to compress the scale and get better visualizations.</p></li>
+</ul>
+</section>
+<section id="clustering-logic-optimal-k" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-logic-optimal-k">3. Clustering Logic &amp; Optimal ‘K’</h3>
+<p>Edward walked the team through the clustering module, emphasizing the need for both automated and subjective analysis.</p>
+<ul>
+<li><p><strong>Feature Selection:</strong> The app will allow users to select features and check for <strong>multicollinearity</strong> (using methodologies taught by Prof Kam) before running the simulation.</p></li>
+<li><p><strong>Determining Clusters:</strong> The team will use two primary metrics:</p>
+<ol type="1">
+<li><p><strong>Elbow Plot:</strong> To see where the “cost” of adding another cluster drops off.</p></li>
+<li><p><strong>Silhouette Score</strong> (referred to as <strong>“Silvia Score”</strong>): Where the higher the score, the better the cluster separation.</p></li>
+</ol></li>
+<li><p><strong>Note on Subjectivity:</strong> Ed noted that the Elbow plot is subjective. While an algorithm can suggest a path, the user should be allowed to choose the cluster count that makes the most sense for their business logic.</p></li>
+</ul>
+</section>
+<section id="github-hygiene-publishing" class="level3">
+<h3 class="anchored" data-anchor-id="github-hygiene-publishing">4. GitHub Hygiene &amp; Publishing</h3>
+<p>The team shared some “lessons learned” to prevent project crashes.</p>
+<ul>
+<li><p><strong>Commit First:</strong> Ed &amp; Son reminded everyone: <strong>Always commit your changes before pulling.</strong></p></li>
+<li><p><strong>Publishing Protocol:</strong> Do not close the RStudio terminal prematurely while the app is “Republishing.” Closing it halfway leads to a 30-minute troubleshooting session (or requires diving into Git Bash).</p></li>
+</ul>
+</section>
+<section id="poster-deadline" class="level3">
+<h3 class="anchored" data-anchor-id="poster-deadline">5. Poster &amp; Deadline</h3>
+<p>Son will lead the design of the A1-sized poster on Figma.</p>
+<ul>
+<li><p><strong>Requirement:</strong> Every team member needs to provide:</p>
+<ul>
+<li><p>A screenshot of their respective module.</p></li>
+<li><p>A brief summary/description of what the module does.</p></li>
+</ul></li>
+<li><p><strong>The “A Chicken Rice Story” Name:</strong> Son expressed doubt about the project name, but the team decided to stick with it – joking that the ultimate goal of working/studying is “to eat chicken rice every day.”</p></li>
+<li><p>Later the team agreed with the new project name “ChickInsights” - a combination of “Chicken Thigh” and “Insights”</p></li>
+</ul>
+</section>
+<section id="next-action-items-after-meeting" class="level3">
+<h3 class="anchored" data-anchor-id="next-action-items-after-meeting">6. Next Action Items after Meeting</h3>
+<ul>
+<li><p>Son to complete Univariate/Bivariate customization.</p></li>
+<li><p>Edward to finalize Clustering Module &amp; Export function.</p></li>
+<li><p>Ho to finalize Predictive Model Comparison charts.</p></li>
+<li><p>The team agreed to arrange the last Teams Online Call on <strong>Tuesday 31 March</strong> for Poster Review and Finalization of Shiny App.</p></li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
