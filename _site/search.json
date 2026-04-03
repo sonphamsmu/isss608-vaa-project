@@ -1,5 +1,110 @@
 [
   {
+    "objectID": "modules/userguide/userguide.html",
+    "href": "modules/userguide/userguide.html",
+    "title": "User Guide",
+    "section": "",
+    "text": "Our Shiny app is hosted on shinyapps.io. This comprehensive guide will help you understand how to use the application."
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#getting-started",
+    "href": "modules/userguide/userguide.html#getting-started",
+    "title": "User Guide",
+    "section": "1. Getting Started",
+    "text": "1. Getting Started\n\n\nOn Launch: The landing page defaults to Data Overview.\nNavigation: The sidebar contains the following modules:\n\nData Overview\nData Cleaning\nExploratory Data Analysis\nClustering\nModel Experimentation\nModel Comparison"
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#data-overview-module",
+    "href": "modules/userguide/userguide.html#data-overview-module",
+    "title": "User Guide",
+    "section": "2. Data Overview Module",
+    "text": "2. Data Overview Module\nProvides a summary of the dataset and allows users to upload or select datasets.\n\n(1) Upload a dataset:\n\nClick “Browse” under Upload CSV file\nEnsure the file has headers and is comma-separated\n\n(2) Alternatively:\n\nSelect a preloaded dataset from the dropdown\nClick “Load Selected Dataset”\n\n(3) Outputs\n\nDataset name\nTotal number of rows and columns\nPreview table of the dataset (first 10 rows)"
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#data-cleaning-module",
+    "href": "modules/userguide/userguide.html#data-cleaning-module",
+    "title": "User Guide",
+    "section": "3. Data Cleaning Module",
+    "text": "3. Data Cleaning Module\nAllows users to preprocess and clean the dataset before analysis.\n\n(1) Dataset Summary Displays:\n\nNumber of numeric vs text columns\nMissing values\nComplete rows\nDataset Structure\n\n(2) Convert Column Types:\n\nSelect column(s)\nChoose target type:\n\nNumeric\nCharacter\nFactor\nDate\n\nClick “Apply Conversion”\n\n\n\n\n\n\n\nTip\n\n\n\nUseful for variables like age → numeric or income_bracket → factor\n\n\n(3) Upload Mapping File\n\nUpload a CSV to batch-convert column types\nFollow template format provided\n\n(4) Data Cleaning Controls\n\nDrop selected columns\nRemove rows with missing values\nRemove rows based on missing % threshold\n\n(5) Save & Export Cleaned Data: Click “Save Current Dataset” to save changes or “Download Current Dataset” to download the new data."
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#exploratory-data-analysis-eda-module",
+    "href": "modules/userguide/userguide.html#exploratory-data-analysis-eda-module",
+    "title": "User Guide",
+    "section": "4. Exploratory Data Analysis (EDA) Module",
+    "text": "4. Exploratory Data Analysis (EDA) Module\n(1) User can select between Univariate and Bivariate tab\n\n4.1 Univariate Analysis:\nAnalyze distribution of a single variable in isolation.\n\n(2) Select a variable from dropdown box\n(3) The system auto-generates plot base on the data type (such as bar chart for categorical or histogram for numeric)\n\n\n\n\n\n\nOutputs\n\n\n\n\nChart visualization\nText summary (e.g., most frequent category)\n\n\n\n\n\n4.2 Bivariate Analysis\nExplore relationships between two variables.\n\n\nSelect X and Y variable\nThe system generates plot base on the data types (such as scatter plot for numeric vs numeric; boxplot or grouped plots for categorical combinations)\n\n\n\n\n\n\n\nInterpretation Tip\n\n\n\n\nLook for trends (positive/negative relationships)\nIdentify clusters or outliers"
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#clustering-module",
+    "href": "modules/userguide/userguide.html#clustering-module",
+    "title": "User Guide",
+    "section": "5. Clustering Module",
+    "text": "5. Clustering Module\nEnables users to segment customers into meaningful groups based on behavioral and demographic characteristics; supports identifying patterns such as high-value customers, low-engagement users, and distinct usage profiles.\n\n(1) The module is structured into three main steps:\n\nFeature Selection\nCluster Selection\nCluster Analysis\n\n\n5.1 Feature Selection\nTo select relevant numeric variables that will be used for clustering:\n(2) Select at least 2 numeric variables from the dropdown and click “Update Features”\n(3) Output: A Correlation Matrix Heatmap is generated to show relationships between selected features\n\nValues close to +1 or -1 → strong correlation\nValues near 0 → weak/no relationship\n\n\n\n\n\n\n\nBest Practice\n\n\n\n\nAvoid selecting highly correlated variables (to reduce redundancy)\nFocus on behavior-related variables for better clustering results\n\n\n\n\n\n5.2 Cluster Selection\nTo determine the optimal number of clusters (K).\n\n(1) Use the slider to select number of clusters (K = 2 to 10)\n(2) Observe the following visual aids:\n\nElbow Plot: Shows Within-Cluster Sum of Squares (WCSS). Look for the “elbow point” where improvement slows down -&gt; indicates a good number of clusters\nSilhouette Score Plot: measures how well data points fit within their cluster, range from -1 to +1. Closer to 1 → better clustering; around 0.2–0.5 → moderate separation.\nCluster Distribution Chart: Displays number (and %) of customers in each cluster\n\n\n\n\n\n\n\nTip\n\n\n\nChoose K where:\n\nElbow stabilizes\nSilhouette score is relatively high\nClusters are reasonably balanced\n\n\n\n(3) Click “Export Cluster Groupings” to download results\n\n\n5.3 Cluster Analysis\nTo interpret and understand the characteristics of each cluster.\n\n(1) Summary Metrics\n\nSelected number of clusters (K)\nAverage silhouette score\nCluster settings (feature used, selected k)\n\n(2) Cluster Feature Heatmap: Shows relative values of features per cluster. Darker color → higher relative value\n(3) Cluster Size Distribution: Bar chart showing proportion of customers in each cluster\n(4) Parallel Coordinate Plot: Displays cluster means across all selected features, each line = one cluster. Helps compare patterns across variables\n(5) Customer Cluster Visualization (PCA Plot): 2D projection of customers using PCA\n\nEach dot = one customer\nColors = cluster membership\nSeparation indicates clustering quality"
+  },
+  {
+    "objectID": "modules/userguide/userguide.html#prediction-modelling-module---model-experimentation-comparison",
+    "href": "modules/userguide/userguide.html#prediction-modelling-module---model-experimentation-comparison",
+    "title": "User Guide",
+    "section": "6. Prediction Modelling Module - Model Experimentation & Comparison",
+    "text": "6. Prediction Modelling Module - Model Experimentation & Comparison\n\n6.1 Model Experimentation\nAllows users to build predictive models to estimate key business outcomes (such as CLV). Users can select different variables and evaluate model performance through multiple metrics and visual diagnostics.\n\n(1) Select Model Type: Choose a regression model (e.g., Linear Regression, randomForest, XGBoost) from the dropdown\n(2) Select Target Variable to predict\n(3) Select Predictor Variables: select relevant input features such as Demographics (age, gender), Socioeconomic (income_bracket, occupation), Behavioral: (app_logins_frequency, active_products)\n(*) If clustering has been performed: Cluster labels are automatically included as predictors.\n(4) Click “Run Experiment”. (* Optional) Click “Save Model to Comparison” for later evaluation.\n\n\n\n\n\n\nOutputs & Interpretation\n\n\n\n\nPerformance Metrics: Displayed at the top:\n\nR² (Coefficient of Determination): measures how well the model explains variance, range from 0 to 1. Higher = better fit.\nMSE (Mean Squared Error): measures average squared prediction error (lower = better)\nRMSE (Root Mean Squared Error): same as MSE but in original scale\n\nEvaluation Table: actual values, predicted values, residuals (errors). This table is meant to identify large prediction errors or detect model instability.\nFeature Importance Plot: shows relative importance of predictors. Longer bars = stronger influence on prediction\nActual vs Predicted Plot: Scatter plot comparing (X-axis: Actual values) and (Y-axis: Predicted values). Ideal model → points along diagonal line.\nModel Summary: regression coefficients, p-values, residual distribution.\n\n\n\n\n\n\n\n\n\nBest Practices\n\n\n\n\nAvoid including irrelevant variables\nUse domain knowledge for feature selection\nCheck multicollinearity before modeling\nCompare multiple models before concluding\n\n\n\n\n\n6.2 Model Comparison Module\nAllows users to evaluate and compare multiple saved models to determine the best-performing one.\n\n\n\n\n\n\nImportant\n\n\n\nEnsure at least one model is saved.\n\n\n\n\n\n\n\n\n\nOutputs & Interpretation\n\n\n\n\n(1) The top cards display “Best Model Highlights” (best R², lowest RMSE, lowest MSE), helps quickly identify the best-performing model.\n(2) Model Comparison Table consists of Model name, Target variables, R², MSE, RMSE.\n(3) Metric Comparison Charts includes R², RMSE, MSE comparison.\n(4) Actual vs Predicted Plot: shows prediction performance across models, helps visually assess model accuracy or spread of predictions.\n(5) Residual Distribution Plot shows error distribution: Centered around 0 → good model; Wide spread → poor accuracy; Skewed → biased predictions.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nChoose the best model based on:\n\nHighest R²\nLowest RMSE\nBalanced residual distribution\nConsistent prediction patterns"
+  },
+  {
+    "objectID": "modules/poster/poster.html",
+    "href": "modules/poster/poster.html",
+    "title": "Project Poster",
+    "section": "",
+    "text": "Access this link to download our poster with original quality.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VA Project - Group 4",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Meet the Team!",
+    "section": "",
+    "text": "We developed this project during our ISSS608 - Visual Analytics and Applications course, January Term of the Academic Year 2025-26. This course is under the Singapore Management University MITB curriculum. To help with the project, we received the guidance from Dr. Kam Tin Seong, Associate Professor of Information Systems.\nMembers\n\nEdward Lim Boon Yan - edward.lim.2025@mitb.smu.edu.sg\nChen Ho Tung - hotung.chen.2024@mitb.smu.edu.sg\nPham Hung Son - hs.pham.2024@mitb.smu.edu.sg\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "modules/meetings/meetings.html",
+    "href": "modules/meetings/meetings.html",
+    "title": "ISSS608 Group 4 Project Meeting Minutes",
+    "section": "",
+    "text": "Date: 14/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\n\n\n\nThe team discussed on the need to standardize base data\nHo shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.\n\n\n\n\n\nSon shared on the initial set up of website using Quarto and load in the proposal as a draft\n\n\n\n\n\nThe team further aligned on the job scope after meeting with Prof Kam\nEdward suggested to stick with separating to task by modules:\n\nSon will focus on the Exploratory Data Analysis (EDA) module.\n\n\n\nEdward will handle the Clustering module.\n\n\n\nHo will be responsible for the Predictive Modelling module."
+  },
+  {
+    "objectID": "modules/meetings/meetings.html#project-meeting-1",
+    "href": "modules/meetings/meetings.html#project-meeting-1",
+    "title": "ISSS608 Group 4 Project Meeting Minutes",
+    "section": "",
+    "text": "Date: 14/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\n\n\n\nThe team discussed on the need to standardize base data\nHo shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.\n\n\n\n\n\nSon shared on the initial set up of website using Quarto and load in the proposal as a draft\n\n\n\n\n\nThe team further aligned on the job scope after meeting with Prof Kam\nEdward suggested to stick with separating to task by modules:\n\nSon will focus on the Exploratory Data Analysis (EDA) module.\n\n\n\nEdward will handle the Clustering module.\n\n\n\nHo will be responsible for the Predictive Modelling module."
+  },
+  {
+    "objectID": "modules/meetings/meetings.html#project-meeting-2",
+    "href": "modules/meetings/meetings.html#project-meeting-2",
+    "title": "ISSS608 Group 4 Project Meeting Minutes",
+    "section": "Project Meeting 2",
+    "text": "Project Meeting 2\nDate: 15/03/2026\nLocation: Microsoft Teams Online Call\nAttendees: Son, Edward, Ho\n\n1. Project Coordination and Planning\n\nThe team discussed arranging a face-to-face meetup session – planned to last approximately four hours. This session aims to facilitate deeper collaboration and alignment across all project components.\nAdditionally, the team shared and reviewed the project storyboard to ensure consistency in design and direction before further development.\n\n\n\n2. Development Workflow and Deployment Strategy\n\nHo & Ed raised concerns regarding Netlify limitations, particularly on excessive republishing.\nThe team agreed to focus on developing modules locally and minimise unnecessary redeployments.\n\n\n\n3. Storyboard and Proposal Updates\n\nSon was assigned to clean up the storyboard and update the project proposal accordingly, scheduled to be completed by 18 March 2026 to ensure alignment with project requirements.\n\n\n\n4. Modules Development\nThe team outlined several key features to be implemented in the EDA module:\n\nVisualisation of data distributions\nToggle functionality for different data types (bivariate and multivariate analysis)\nUser selection of dependent and output variables\nSmart EDA functionalities to enhance automated insights\n\nFor the Clustering & Prediction modules:\n\nInteractive correlation matrix with user input controls\nAnalysis of customer lifetime value (CLV) as the target variable, including chart setup\nUser-controlled toggles for outlier removal\nIntegration of data transformation steps with visual feedback\n\nThese tasks are collaboratively assigned among Son, Ho, and Edward."
+  },
+  {
+    "objectID": "modules/meetings/meetings.html#project-meeting-3",
+    "href": "modules/meetings/meetings.html#project-meeting-3",
+    "title": "ISSS608 Group 4 Project Meeting Minutes",
+    "section": "Project Meeting 3",
+    "text": "Project Meeting 3\nDate: 20/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\nThe team focused on the foundational setup of the Shiny application, specifically addressing the UI framework and data clustering logic.\n\n1. Application Logic & Clustering\n\nUser Flow: The app will allow users to select specific features/variables to perform clustering.\n\n\n\nForecasting: Once clusters are generated, the app will map these results and perform a group_by function to provide aggregate forecasting for each individual cluster.\nSimplification: The team agreed to avoid “over-complicating” the prototype. The initial focus will be on basic data understanding before adding advanced features like export functions.\n\n\n\n2. UI/UX Design\n\nFramework: Use of bs4dash was confirmed as it is more user-friendly and requires less manual configuration than the “basic” page layout.\nLayout: The interface will feature a sidebar navigation tab, side panel for user inputs (dropdowns, sliders, file uploads) and a main panel for visual outputs (histograms/charts).\nFidelity: The team discussed using “low-fidelity” wireframes from previous phase to move toward “high-fidelity” design.\n\n\n\n3. Deployment & Version Control\n\nRepository Strategy: to avoid rendering errors, the team decided to use two separate GitHub repositories: one for the main website and one for the Shiny app.\nIntegration: The main website will include a redirect link pointing directly to the hosted Shiny application.\nAccess: Son added Ho and Ed as collaborators on the new repositories.\n\n\n\n4. Action Items after Meetup\n\nEdward to finalize the GitHub pull/push connection and verify the redirect link on the main website.\nHo to begin building the app’s basic bs4dash framework.\nSon begin to draft the “User Guide”.\nEach members to continue the development of their respective modules.\nThe team agreed to meet in person again on Saturday 28 March to review and finalize the prototype & modules."
+  },
+  {
+    "objectID": "modules/meetings/meetings.html#project-meeting-4",
+    "href": "modules/meetings/meetings.html#project-meeting-4",
+    "title": "ISSS608 Group 4 Project Meeting Minutes",
+    "section": "Project Meeting 4",
+    "text": "Project Meeting 4\nDate: 28/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\nTheme: Fine-tuning EDA, Clustering Logic, and Poster Logistics\n\n1. App Performance & Data Handling\nThe team discussed optimizing the user experience by limiting data overhead and improving initial data inspection.\n\nUpload Limits: Ho proposed limiting users to a maximum of three version uploads to prevent hitting system limits.\nData Glimpse: to speed up the process, the team agreed on using a sampling approach. Instead of loading the full dataset for every check, the app will show a “glimpse” or a small portion to ensure the model fits before full execution.\nData Cleaning: The “Active Data” framework was confirmed. All modules must refer to the active data object to maintain consistency across cleaning, EDA, and modeling.\n\n\n\n2. EDA Customization\nThe team debated on how to make the EDA more interactive and meaningful for end-users.\n\nVariable Handling: Son suggested removing non-analytical fields like CustomerID from univariate plots, but Ed proposed keeping them as “unit counts” (using distinct_count) to track unique customers across categories like Gender or Occupation.\nThe “French Fry” Histogram: A key discussion point was allowing users to toggle bin sizes.\n\nSmall bins = “French Fries” (High detail/narrow distribution).\nLarge bins = “Hash Browns” (Collapsed/generalized distribution).\n\nLog Scaling: For transaction values that are highly skewed, Ho and Ed agreed to implement Log Transformation options to compress the scale and get better visualizations.\n\n\n\n3. Clustering Logic & Optimal ‘K’\nEdward walked the team through the clustering module, emphasizing the need for both automated and subjective analysis.\n\nFeature Selection: The app will allow users to select features and check for multicollinearity (using methodologies taught by Prof Kam) before running the simulation.\nDetermining Clusters: The team will use two primary metrics:\n\nElbow Plot: To see where the “cost” of adding another cluster drops off.\nSilhouette Score (referred to as “Silvia Score”): Where the higher the score, the better the cluster separation.\n\nNote on Subjectivity: Ed noted that the Elbow plot is subjective. While an algorithm can suggest a path, the user should be allowed to choose the cluster count that makes the most sense for their business logic.\n\n\n\n4. GitHub Hygiene & Publishing\nThe team shared some “lessons learned” to prevent project crashes.\n\nCommit First: Ed & Son reminded everyone: Always commit your changes before pulling.\nPublishing Protocol: Do not close the RStudio terminal prematurely while the app is “Republishing.” Closing it halfway leads to a 30-minute troubleshooting session (or requires diving into Git Bash).\n\n\n\n5. Poster & Deadline\nSon will lead the design of the A1-sized poster on Figma.\n\nRequirement: Every team member needs to provide:\n\nA screenshot of their respective module.\nA brief summary/description of what the module does.\n\nThe “A Chicken Rice Story” Name: Son expressed doubt about the project name, but the team decided to stick with it – joking that the ultimate goal of working/studying is “to eat chicken rice every day.”\nLater the team agreed with the new project name “ChickInsights” - a combination of “Chicken Thigh” and “Insights”\n\n\n\n6. Next Action Items after Meeting\n\nSon to complete Univariate/Bivariate customization.\nEdward to finalize Clustering Module & Export function.\nHo to finalize Predictive Model Comparison charts.\nThe team agreed to arrange the last Teams Online Call on Tuesday 31 March for Poster Review and Finalization of Shiny App."
+  },
+  {
     "objectID": "modules/proposal/proposal.html",
     "href": "modules/proposal/proposal.html",
     "title": "Project Proposal",
@@ -61,61 +166,5 @@
     "title": "Project Proposal",
     "section": "",
     "text": "The expected outcome of the project is a functional and interactive R Shiny dashboard that enables users to configure models, run analyses, and interpret results within a single visual analytics environment. The final application is expected to support analytical storytelling and practical decision making by combining descriptive, unsupervised, and supervised analytics in one platform."
-  },
-  {
-    "objectID": "modules/meetings/meetings.html",
-    "href": "modules/meetings/meetings.html",
-    "title": "ISSS608 Group 4 Project Meeting Minutes",
-    "section": "",
-    "text": "Date: 14/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\n\n\n\nThe team discussed on the need to standardize base data\nHo shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.\n\n\n\n\n\nSon shared on the initial set up of website using Quarto and load in the proposal as a draft\n\n\n\n\n\nThe team further aligned on the job scope after meeting with Prof Kam\nEdward suggested to stick with separating to task by modules:\n\nSon will focus on the Exploratory Data Analysis (EDA) module.\n\n\n\nEdward will handle the Clustering module.\n\n\n\nHo will be responsible for the Predictive Modelling module."
-  },
-  {
-    "objectID": "modules/meetings/meetings.html#project-meeting-1",
-    "href": "modules/meetings/meetings.html#project-meeting-1",
-    "title": "ISSS608 Group 4 Project Meeting Minutes",
-    "section": "",
-    "text": "Date: 14/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\n\n\n\nThe team discussed on the need to standardize base data\nHo shared that he have dropped only one columns due to having multiple missing value. There is no other concern with the rest of the team.\n\n\n\n\n\nSon shared on the initial set up of website using Quarto and load in the proposal as a draft\n\n\n\n\n\nThe team further aligned on the job scope after meeting with Prof Kam\nEdward suggested to stick with separating to task by modules:\n\nSon will focus on the Exploratory Data Analysis (EDA) module.\n\n\n\nEdward will handle the Clustering module.\n\n\n\nHo will be responsible for the Predictive Modelling module."
-  },
-  {
-    "objectID": "modules/meetings/meetings.html#project-meeting-2",
-    "href": "modules/meetings/meetings.html#project-meeting-2",
-    "title": "ISSS608 Group 4 Project Meeting Minutes",
-    "section": "Project Meeting 2",
-    "text": "Project Meeting 2\nDate: 15/03/2026\nLocation: Microsoft Teams Online Call\nAttendees: Son, Edward, Ho\n\n1. Project Coordination and Planning\n\nThe team discussed arranging a face-to-face meetup session – planned to last approximately four hours. This session aims to facilitate deeper collaboration and alignment across all project components.\nAdditionally, the team shared and reviewed the project storyboard to ensure consistency in design and direction before further development.\n\n\n\n2. Development Workflow and Deployment Strategy\n\nHo & Ed raised concerns regarding Netlify limitations, particularly on excessive republishing.\nThe team agreed to focus on developing modules locally and minimise unnecessary redeployments.\n\n\n\n3. Storyboard and Proposal Updates\n\nSon was assigned to clean up the storyboard and update the project proposal accordingly, scheduled to be completed by 18 March 2026 to ensure alignment with project requirements.\n\n\n\n4. Modules Development\nThe team outlined several key features to be implemented in the EDA module:\n\nVisualisation of data distributions\nToggle functionality for different data types (bivariate and multivariate analysis)\nUser selection of dependent and output variables\nSmart EDA functionalities to enhance automated insights\n\nFor the Clustering & Prediction modules:\n\nInteractive correlation matrix with user input controls\nAnalysis of customer lifetime value (CLV) as the target variable, including chart setup\nUser-controlled toggles for outlier removal\nIntegration of data transformation steps with visual feedback\n\nThese tasks are collaboratively assigned among Son, Ho, and Edward."
-  },
-  {
-    "objectID": "modules/meetings/meetings.html#project-meeting-3",
-    "href": "modules/meetings/meetings.html#project-meeting-3",
-    "title": "ISSS608 Group 4 Project Meeting Minutes",
-    "section": "Project Meeting 3",
-    "text": "Project Meeting 3\nDate: 20/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\nThe team focused on the foundational setup of the Shiny application, specifically addressing the UI framework and data clustering logic.\n\n1. Application Logic & Clustering\n\nUser Flow: The app will allow users to select specific features/variables to perform clustering.\n\n\n\nForecasting: Once clusters are generated, the app will map these results and perform a group_by function to provide aggregate forecasting for each individual cluster.\nSimplification: The team agreed to avoid “over-complicating” the prototype. The initial focus will be on basic data understanding before adding advanced features like export functions.\n\n\n\n2. UI/UX Design\n\nFramework: Use of bs4dash was confirmed as it is more user-friendly and requires less manual configuration than the “basic” page layout.\nLayout: The interface will feature a sidebar navigation tab, side panel for user inputs (dropdowns, sliders, file uploads) and a main panel for visual outputs (histograms/charts).\nFidelity: The team discussed using “low-fidelity” wireframes from previous phase to move toward “high-fidelity” design.\n\n\n\n3. Deployment & Version Control\n\nRepository Strategy: to avoid rendering errors, the team decided to use two separate GitHub repositories: one for the main website and one for the Shiny app.\nIntegration: The main website will include a redirect link pointing directly to the hosted Shiny application.\nAccess: Son added Ho and Ed as collaborators on the new repositories.\n\n\n\n4. Action Items after Meetup\n\nEdward to finalize the GitHub pull/push connection and verify the redirect link on the main website.\nHo to begin building the app’s basic bs4dash framework.\nSon begin to draft the “User Guide”.\nEach members to continue the development of their respective modules.\nThe team agreed to meet in person again on Saturday 28 March to review and finalize the prototype & modules."
-  },
-  {
-    "objectID": "modules/meetings/meetings.html#project-meeting-4",
-    "href": "modules/meetings/meetings.html#project-meeting-4",
-    "title": "ISSS608 Group 4 Project Meeting Minutes",
-    "section": "Project Meeting 4",
-    "text": "Project Meeting 4\nDate: 28/03/2026\nLocation: SMU Campus\nAttendees: Son, Edward, Ho\nTheme: Fine-tuning EDA, Clustering Logic, and Poster Logistics\n\n1. App Performance & Data Handling\nThe team discussed optimizing the user experience by limiting data overhead and improving initial data inspection.\n\nUpload Limits: Ho proposed limiting users to a maximum of three version uploads to prevent hitting system limits.\nData Glimpse: to speed up the process, the team agreed on using a sampling approach. Instead of loading the full dataset for every check, the app will show a “glimpse” or a small portion to ensure the model fits before full execution.\nData Cleaning: The “Active Data” framework was confirmed. All modules must refer to the active data object to maintain consistency across cleaning, EDA, and modeling.\n\n\n\n2. EDA Customization\nThe team debated on how to make the EDA more interactive and meaningful for end-users.\n\nVariable Handling: Son suggested removing non-analytical fields like CustomerID from univariate plots, but Ed proposed keeping them as “unit counts” (using distinct_count) to track unique customers across categories like Gender or Occupation.\nThe “French Fry” Histogram: A key discussion point was allowing users to toggle bin sizes.\n\nSmall bins = “French Fries” (High detail/narrow distribution).\nLarge bins = “Hash Browns” (Collapsed/generalized distribution).\n\nLog Scaling: For transaction values that are highly skewed, Ho and Ed agreed to implement Log Transformation options to compress the scale and get better visualizations.\n\n\n\n3. Clustering Logic & Optimal ‘K’\nEdward walked the team through the clustering module, emphasizing the need for both automated and subjective analysis.\n\nFeature Selection: The app will allow users to select features and check for multicollinearity (using methodologies taught by Prof Kam) before running the simulation.\nDetermining Clusters: The team will use two primary metrics:\n\nElbow Plot: To see where the “cost” of adding another cluster drops off.\nSilhouette Score (referred to as “Silvia Score”): Where the higher the score, the better the cluster separation.\n\nNote on Subjectivity: Ed noted that the Elbow plot is subjective. While an algorithm can suggest a path, the user should be allowed to choose the cluster count that makes the most sense for their business logic.\n\n\n\n4. GitHub Hygiene & Publishing\nThe team shared some “lessons learned” to prevent project crashes.\n\nCommit First: Ed & Son reminded everyone: Always commit your changes before pulling.\nPublishing Protocol: Do not close the RStudio terminal prematurely while the app is “Republishing.” Closing it halfway leads to a 30-minute troubleshooting session (or requires diving into Git Bash).\n\n\n\n5. Poster & Deadline\nSon will lead the design of the A1-sized poster on Figma.\n\nRequirement: Every team member needs to provide:\n\nA screenshot of their respective module.\nA brief summary/description of what the module does.\n\nThe “A Chicken Rice Story” Name: Son expressed doubt about the project name, but the team decided to stick with it – joking that the ultimate goal of working/studying is “to eat chicken rice every day.”\nLater the team agreed with the new project name “ChickInsights” - a combination of “Chicken Thigh” and “Insights”\n\n\n\n6. Next Action Items after Meeting\n\nSon to complete Univariate/Bivariate customization.\nEdward to finalize Clustering Module & Export function.\nHo to finalize Predictive Model Comparison charts.\nThe team agreed to arrange the last Teams Online Call on Tuesday 31 March for Poster Review and Finalization of Shiny App."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Meet the Team!",
-    "section": "",
-    "text": "Ongoing\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VA Project - Group 4",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "modules/poster/poster.html",
-    "href": "modules/poster/poster.html",
-    "title": "Project Poster",
-    "section": "",
-    "text": "Access this link to download our poster with original quality.\n\n\n\n\n Back to top"
   }
 ]

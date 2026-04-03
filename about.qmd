@@ -2,4 +2,14 @@
 title: "Meet the Team!"
 ---
 
-Ongoing
+![](images/g11-01.png)
+
+We developed this project during our **ISSS608** - Visual Analytics and Applications course, January Term of the Academic Year 2025-26. This course is under the [Singapore Management University](https://www.smu.edu.sg/) MITB curriculum. To help with the project, we received the guidance from [Dr. Kam Tin Seong](https://faculty.smu.edu.sg/profile/kam-tin-seong-486), Associate Professor of Information Systems.
+
+**Members**
+
+-   [Edward Lim Boon Yan](https://edwardbyl.netlify.app/) - edward.lim.2025\@mitb.smu.edu.sg
+
+-   [Chen Ho Tung](https://isss608-visual.netlify.app/) - hotung.chen.2024\@mitb.smu.edu.sg
+
+-   [Pham Hung Son](https://sonpham-isss608-vaa-jan2526.netlify.app/) - hs.pham.2024\@mitb.smu.edu.sg
