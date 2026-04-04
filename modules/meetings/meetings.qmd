@@ -113,7 +113,7 @@ The team focused on the foundational setup of the Shiny application, specificall
 
 -   **Simplification:** The team agreed to avoid "over-complicating" the prototype. The initial focus will be on basic data understanding before adding advanced features like export functions.
 
-### 2. UI/UX Design 
+### 2. UI/UX Design
 
 -   **Framework:** Use of `bs4dash` was confirmed as it is more user-friendly and requires less manual configuration than the "basic" page layout.
 
@@ -220,3 +220,47 @@ Son will lead the design of the A1-sized poster on Figma.
 -   Ho to finalize Predictive Model Comparison charts.
 
 -   The team agreed to arrange the last Teams Online Call on **Tuesday 31 March** for Poster Review and Finalization of Shiny App.
+
+## Project Meeting 5
+
+**Date:** 31/03/2026
+
+**Location:** Microsoft Teams Online Call
+
+**Attendees:** Son, Edward, Ho
+
+**Theme:** Fine-tuning EDA, Clustering Logic, and Poster Logistics
+
+### 1. Data Load
+
+-   The system now limits the maximum data set load to 5.
+
+-   Additionally, a button has been added that allows users to clear saved files.
+
+### 2. Data Cleaning
+
+-   **Convert Column Type:** Users can now use the Data Cleaning tab to convert column data types, either by selecting multiple columns at once or performing batch updates via CSV template upload.
+
+-   **Data Cleaning:** A new feature allows users to handle missing values by dropping columns or rows that exceed a specified percentage threshold.
+
+-   **Pushing Cleaned Data:** After cleaning, users can save the processed data either within the system or export it for offline use.
+
+### 2. Modification to Clustering
+
+-   **Offline Integration (Download & Upload):** To improve integration, a download and upload function has been implemented, allowing users to export data offline and re-upload it to map clustering results back into the system. Users can also save the cleaned data directly within the system for future use.
+
+-   **Dynamic Clustering Update:** Clustering is now controlled via an interactive slider, enabling users to adjust parameters in real time. The resulting clusters automatically update the active dataset and can be used across other modules.
+
+### 3. Prediction Model
+
+-   **Cluster-Enhanced Prediction:** With clustering results dynamically integrated into the active dataset, the prediction model can now include cluster labels as input variables.
+
+-   **Dummy Encoding:** Dummy (one-hot) encoding has been implemented to ensure categorical variables are properly processed by the prediction model during finalisation.
+
+### 4. Next Action
+
+-   **Finalisation Tasks:** Son will be taking lead for completing the project website, poster, and user guide.
+
+<!-- -->
+
+-   **Support:** Ed and Ho will provide support by contributing content and incorporating requested items into the poster.

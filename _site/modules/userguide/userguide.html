@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,14 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0695b75e8d502f7d4bb4f249b367eeb5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5c49dcdaa1dd0040e71953adad602abc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,6 +80,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">VA Project - Group 4</span>
     </a>
@@ -265,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-cleaning-module" class="level2">
 <h2 class="anchored" data-anchor-id="data-cleaning-module">3. Data Cleaning Module</h2>
-<p>Allows users to preprocess and clean the dataset before analysis.</p>
+<p>Allows users to preprocess and clean the dataset before analysis. This can be done by multiple selections or via a template upload.</p>
 <p><img src="images/g3.png" class="img-fluid"></p>
 <p>(1) Dataset Summary Displays:</p>
 <ul>
@@ -302,13 +305,13 @@ Tip
 <p>(3) Upload Mapping File</p>
 <ul>
 <li><p>Upload a CSV to batch-convert column types</p></li>
-<li><p>Follow template format provided</p></li>
+<li><p>Users may download the template format provided</p></li>
 </ul>
 <p>(4) Data Cleaning Controls</p>
 <ul>
-<li><p>Drop selected columns</p></li>
-<li><p>Remove rows with missing values</p></li>
-<li><p>Remove rows based on missing % threshold</p></li>
+<li><p>Drop selected columns</p>
+<p>or</p></li>
+<li><p>Remove rows with missing values based on % threshold</p></li>
 </ul>
 <p>(5) Save &amp; Export Cleaned Data: Click <strong>“Save Current Dataset”</strong> to save changes or <strong>“Download Current Dataset”</strong> to download the new data.</p>
 </section>
@@ -327,7 +330,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Outputs
+<span class="screen-reader-only">Note</span>Outputs
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -352,7 +355,7 @@ Outputs
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Interpretation Tip
+<span class="screen-reader-only">Tip</span>Interpretation Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -389,7 +392,7 @@ Interpretation Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Best Practice
+<span class="screen-reader-only">Important</span>Best Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -403,12 +406,13 @@ Best Practice
 <section id="cluster-selection" class="level3">
 <h3 class="anchored" data-anchor-id="cluster-selection">5.2 Cluster Selection</h3>
 <p>To determine the optimal number of clusters (K).</p>
+<p><em>This will automatically update underlying active data to be used for further analysis.</em></p>
 <p><img src="images/g7-01.png" class="img-fluid"></p>
 <p>(1) Use the <strong>slider</strong> to select number of clusters (K = 2 to 10)</p>
 <p>(2) Observe the following visual aids:</p>
 <ul>
 <li><p>Elbow Plot: Shows Within-Cluster Sum of Squares (WCSS). Look for the “elbow point” where improvement slows down -&gt; indicates a good number of clusters</p></li>
-<li><p>Silhouette Score Plot: measures how well data points fit within their cluster, range from -1 to +1. Closer to <strong>1</strong> → better clustering; around <strong>0.2–0.5</strong> → moderate separation.</p></li>
+<li><p>Silhouette Score Plot: measures how well data points fit within their cluster, range from -1 to +1. Closer to <strong>1</strong> → better clustering; around <strong>0.2–0.5</strong> → moderate separation. (Cluster with highest silhouette score will have a larger point)</p></li>
 <li><p>Cluster Distribution Chart: Displays number (and %) of customers in each cluster</p></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled" data-titile="Decision Tip">
@@ -469,7 +473,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Outputs &amp; Interpretation
+<span class="screen-reader-only">Note</span>Outputs &amp; Interpretation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -493,7 +497,7 @@ Outputs &amp; Interpretation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Best Practices
+<span class="screen-reader-only">Tip</span>Best Practices
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -529,7 +533,7 @@ Important
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Outputs &amp; Interpretation
+<span class="screen-reader-only">Note</span>Outputs &amp; Interpretation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -618,13 +622,14 @@ Tip
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

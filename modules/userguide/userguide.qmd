@@ -53,7 +53,7 @@ Provides a summary of the dataset and allows users to upload or select datasets.
 
 ## 3. Data Cleaning Module
 
-Allows users to preprocess and clean the dataset before analysis.
+Allows users to preprocess and clean the dataset before analysis. This can be done by multiple selections or via a template upload.
 
 ![](images/g3.png)
 
@@ -91,15 +91,15 @@ Useful for variables like `age` → numeric or `income_bracket` → factor
 
 -   Upload a CSV to batch-convert column types
 
--   Follow template format provided
+-   Users may download the template format provided
 
 \(4\) Data Cleaning Controls
 
 -   Drop selected columns
 
--   Remove rows with missing values
+    or
 
--   Remove rows based on missing % threshold
+-   Remove rows with missing values based on % threshold
 
 \(5\) Save & Export Cleaned Data: Click **"Save Current Dataset"** to save changes or **"Download Current Dataset"** to download the new data.
 
@@ -175,6 +175,8 @@ To select relevant numeric variables that will be used for clustering:
 
 To determine the optimal number of clusters (K).
 
+*This will automatically update underlying active data to be used for further analysis.*
+
 ![](images/g7-01.png)
 
 \(1\) Use the **slider** to select number of clusters (K = 2 to 10)
@@ -183,7 +185,7 @@ To determine the optimal number of clusters (K).
 
 -   Elbow Plot: Shows Within-Cluster Sum of Squares (WCSS). Look for the “elbow point” where improvement slows down -\> indicates a good number of clusters
 
--   Silhouette Score Plot: measures how well data points fit within their cluster, range from -1 to +1. Closer to **1** → better clustering; around **0.2–0.5** → moderate separation.
+-   Silhouette Score Plot: measures how well data points fit within their cluster, range from -1 to +1. Closer to **1** → better clustering; around **0.2–0.5** → moderate separation. (Cluster with highest silhouette score will have a larger point)
 
 -   Cluster Distribution Chart: Displays number (and %) of customers in each cluster
 
@@ -298,11 +300,11 @@ Ensure at least one model is saved.
 ::: callout-tip
 Choose the best model based on:
 
--    Highest **R²**
+-   Highest **R²**
 
--    Lowest **RMSE**
+-   Lowest **RMSE**
 
--    Balanced residual distribution
+-   Balanced residual distribution
 
--    Consistent prediction patterns
+-   Consistent prediction patterns
 :::
